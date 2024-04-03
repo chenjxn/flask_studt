@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>转义字符过滤器</h1>
+    转义前的数据是:{{ info |safe}}
+   绝对值：{{ -6 | abs }}<br>
+    小数: {{ 6 | float }}<br>
+    字符串：{{ 6 | string }}<br>
+
+    格式化:{{'%s--%s' | format('我','你')}}<br>
+    长度：{{'我是九，你是三，除了你，还是你' |length}}<br>
+    最后一个：{{'我是九，你是三，除了你，还是你' |last}}<br>
+    第一个：{{'我是九，你是三，除了你，还是你' |first}}<br>
+    统计次数： {{'我是九，你是三，除了你，还是你' | wordcount }}<br>
+    替换：{{'===我是九，你是三，除了你，还是你====' |replace('我是九，你是三，除了你，还是你','拿着,这个无限额度的黑卡，随便刷')}}
+</body>
+</html>

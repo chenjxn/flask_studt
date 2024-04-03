@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>已上传的文件如下:</h1>
+    <form action="/download" method="post">
+    <p>
+        {% for i in fnma %}
+            <input type="checkbox" name="download" value="{{ i }}">{{ i }}</input><br>
+        {% endfor %}
+    <label><input type="checkbox" onclick="toggleAll(this)"> 全选/取消全选</label>
+    </p>
+        <input type="submit" value="下载"></input>
+    <input type="submit" value="打开" name="openjpg"></input>
+
+    </form>
+<script>
+function toggleAll(source) {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = source.checked;
+  }
+}
+</script>
+</body>
+</html>

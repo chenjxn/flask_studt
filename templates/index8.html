@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if not username  %}
+        <a href="/14?username='john'">登录</a>
+        <br>
+        <span>注册</span>
+    {% else %}
+        <a href="/14?username=">退出登录</a>
+    {% endif %}
+</body>
+</html>

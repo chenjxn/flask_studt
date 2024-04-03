@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>过滤器的使用</h1>
+<p>过滤前{{ pasow }}</p>
+<br>
+<p>过滤后{{ pasow | int }}</p>
+
+<p>过滤前:{{ nickname }}</p>
+<br>
+<p>过滤后:{{ nickname | default('用户') }}</p>
+<p>过滤后:{{ nicksname | default('用户',boolean=True) }}</p>
+<p>过滤后：{{ nickname or '用户1' }}</p>
+</body>
+</html>
